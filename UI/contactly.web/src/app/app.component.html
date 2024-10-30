@@ -1,0 +1,34 @@
+<!-- <h1 class="text-3xl font-bold underline">
+  Hello PM!
+</h1> -->
+<div class=" flex h-screen">
+ <div class="w-[50%]">
+ </div>
+
+  <div class="overflw-auto w-[50%]">
+  @if (contact$ | async; as contacts) {
+    @if(contacts.length > 0){
+      <ul>
+        @for(item of contacts; track $index)
+        {
+         <li class="p-2 bg-slate-100 border-b-2 bg-slate-200">
+
+          <span class="font-light text-3xl">{{item.name}} </span>
+          <!-- <span class="font-light text-3xl">{{item.email}} </span>
+          <span class="font-light text-3xl">{{item.name}} </span>
+          <span class="font-light text-3xl">{{item.name}} </span> -->
+         </li>
+        }
+      </ul>
+  
+  
+    } @else {
+      <p>No contacts found...!</p>
+    }
+  }
+    </div>
+  </div>
+
+
+
+
